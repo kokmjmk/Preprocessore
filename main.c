@@ -1,35 +1,13 @@
 #include<stdio.h>
-#define LIRE_EURO(x) x/1936
-#define EURO_LIRE(x) x*1936
+#define CUBO(x) (x)*(x)*(x)
+
+int main(){
+    printf("CUBO(6)= %d\n", CUBO(6));
+    printf("CUBO(3+4)= %d\n", CUBO(3+4));
+    printf("CUBO(7)= %d\n", CUBO(7));
+    printf("CUBO(9-3)= %d\n", CUBO(9-3));
+    return 0;
 
 
-int main(void){
-    float lire, euro, valore;
-    char scelta;
-    printf("Inserisci una valuta\n");
-    printf("a. euro\n");
-    printf("b. lire\n");
-    scanf(" %c", &scelta);
-    switch (scelta)
-    {
-    case 'a':
-        printf("Inserisci i numeri di lire per trasformare in euro\n");
-        scanf("%f", &euro);
-        valore = EURO_LIRE(euro);
-        printf("lire= %f euro\n", valore);
-        break;
-    case 'b':
-    printf("Inserisci i numeri di euro per trasformare in lire\n");
-        scanf("%f", &lire);
-        valore = LIRE_EURO(lire);
-        printf("euro= %f lire\n", valore);
-        break;
-    
-    default:
-    printf("Valuta non riconosciuta\n");
-        break;
-    }
 
-
-return 0;
 }
